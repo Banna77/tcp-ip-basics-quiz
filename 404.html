@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TCP/IP Quiz</title>
+    <script>
+      // Redirect to index.html with the original path in query string
+      var pathSegments = window.location.pathname.split('/').filter(Boolean);
+      var redirectPath = '/tcp-ip-basics-quiz/';
+      
+      // If there's a path beyond /tcp-ip-basics-quiz/, redirect to index with path info
+      if (pathSegments.length > 1) {
+        var subPath = '/' + pathSegments.slice(1).join('/');
+        redirectPath += '?redirect=' + encodeURIComponent(subPath);
+      }
+      
+      window.location.replace(redirectPath);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
